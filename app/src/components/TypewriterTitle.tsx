@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface TypewriterTitleProps {
     text: string;
@@ -17,6 +17,7 @@ export const TypewriterTitle: React.FC<TypewriterTitleProps> = ({ text, classNam
         if (text !== displayedText && !isDeleting) {
             // Se já tem algo escrito, apaga primeiro. Se não, escreve direto.
             if (displayedText.length > 0 && !displayedText.startsWith(text.substring(0, 1))) {
+                // eslint-disable-next-line react-hooks/set-state-in-effect
                 setIsDeleting(true);
             } else if (displayedText.length === 0) {
                 setIsDeleting(false);
