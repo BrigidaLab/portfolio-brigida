@@ -38,7 +38,7 @@ export const ProjectGallery: React.FC = () => {
     return (
         <section
             ref={containerRef}
-            className="relative font-sans bg-[#fefefa]"
+            className="relative font-sans bg-[#fdfdfd]"
             style={{ height: SCROLL_HEIGHT }}
         >
             <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col p-6 lg:p-12">

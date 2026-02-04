@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
                         width: "fit-content",
                         maxWidth: "100vw",
                         borderRadius: "9999px",
-                        backgroundColor: "rgba(254, 254, 250, 0.9)",
+                        backgroundColor: "rgba(253, 253, 253, 0.9)",
                         backdropFilter: "blur(12px)",
                         boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                         padding: "12px 50px",
