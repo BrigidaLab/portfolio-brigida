@@ -8,7 +8,7 @@ export const ProjectGallery: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     // Altura total ajustada para dar tempo de scroll
-    const SCROLL_HEIGHT = `${(projects.length + 1) * 100}vh`;
+    const SCROLL_HEIGHT = `${(projects.length + 1) * 40}vh`;
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
