@@ -13,7 +13,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     return (
         <ReactLenis root>
             <CustomCursor />
-            <div className="flex flex-col min-h-screen bg-background text-text antialiased selection:bg-[#14B8A6] selection:text-black">
+            <div className="flex flex-col min-h-screen bg-background text-text antialiased selection:bg-[#61E88A] selection:text-black">
                 <Header />
                 <main className="flex-grow relative z-10">
                     {children}
