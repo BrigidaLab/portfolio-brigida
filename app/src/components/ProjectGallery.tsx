@@ -45,7 +45,7 @@ export const ProjectGallery: React.FC = () => {
 
                 {/* 1. Container de Títulos (Alinhado com Hero) */}
                 <div className="relative lg:absolute top-0 w-full max-w-[1400px] lg:left-1/2 lg:-translate-x-1/2 px-0 lg:px-6 h-auto lg:h-full pointer-events-none z-20">
-                    <div className="relative w-full h-auto lg:h-full flex flex-col justify-start lg:justify-between pt-32 lg:pt-[120px] pb-0 lg:pb-16">
+                    <div className="relative w-full h-auto lg:h-full flex flex-col justify-start lg:justify-between pt-48 lg:pt-[120px] pb-0 lg:pb-16">
 
                         {/* Topo: Títulos */}
                         <div>
