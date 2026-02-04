@@ -34,7 +34,7 @@ export const CustomCursor: React.FC = () => {
             // transition-all duration-200 handle only the SHAPE change (width/height), not movement. 
             // Movement is instant via framer motion values.
             className={`fixed top-0 left-0 pointer-events-none z-[9999] flex items-center justify-center transition-all duration-200 ease-out ${isHoveringText
-                ? 'w-[4px] h-[9vw] bg-[#14B8A6] opacity-100' // ACTIVE: Teal Bar
+                ? 'w-[4px] h-[9vw] bg-[#61E88A] opacity-100' // ACTIVE: Green Bar
                 : 'w-0 h-0 opacity-0' // DEFAULT: Hidden
                 }`}
         >
