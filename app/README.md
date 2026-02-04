@@ -1,4 +1,4 @@
-# Portfólio Brígida Gama (v2.0)
+# Portfólio Brígida Gama (v2.0) ![CI](https://github.com/BrigidaLab/portfolio-brigida/actions/workflows/ci.yml/badge.svg)
 
 Este projeto é uma reconstrução profissional do portfólio original (Framer), agora utilizando tecnologias modernas de desenvolvimento web.
 
