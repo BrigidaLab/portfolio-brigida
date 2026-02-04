@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
                             initial={{ y: 100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8, ease: "circOut" }}
-                            className="text-[15.5vw] lg:text-[9vw] leading-[0.9] font-medium tracking-tighter text-[#1d1d1d] uppercase relative z-10 selection:bg-[#61E88A] selection:text-black hover:cursor-none"
+                            className="text-[15.5vw] lg:text-[9vw] leading-[0.9] font-medium tracking-tighter text-[#1d1d1d] uppercase relative z-10 selection:bg-[#61E88A] selection:text-black caret-[#61E88A] hover:cursor-none"
                         >
                             Brígida
                         </motion.h1>
@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
                             initial={{ y: 100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.15, ease: "circOut" }}
-                            className="text-[15.5vw] lg:text-[9vw] leading-[0.9] font-medium tracking-tighter text-[#1d1d1d] uppercase lg:ml-[0.8em] relative z-10 selection:bg-[#61E88A] selection:text-black hover:cursor-none"
+                            className="text-[15.5vw] lg:text-[9vw] leading-[0.9] font-medium tracking-tighter text-[#1d1d1d] uppercase lg:ml-[0.8em] relative z-10 selection:bg-[#61E88A] selection:text-black caret-[#61E88A] hover:cursor-none"
                         >
                             Bastos
                         </motion.h1>
