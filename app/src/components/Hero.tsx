@@ -139,7 +139,7 @@ export const Hero: React.FC = () => {
                 <motion.div
                     animate={{ x: [0, -1000] }}
                     transition={{ repeat: Infinity, duration: 35, ease: "linear" }}
-                    className="text-[4vh] lg:text-[8vh] font-bold uppercase tracking-widest text-transparent will-change-transform"
+                    className="text-[6vh] lg:text-[8vh] font-bold uppercase tracking-widest text-transparent will-change-transform"
                     style={{ WebkitTextStroke: "1px #000" }}
                 >
                     User Experience • Interface Design • Product Strategy • User Experience • Interface Design • Product Strategy
