@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { projects } from '../data/projectData';
 import { TypewriterTitle } from './TypewriterTitle';
@@ -34,6 +34,27 @@ export const ProjectGallery: React.FC = () => {
     // Lógica para contar projetos na categoria atual
     const categoryProjects = projects.filter(p => p.category === activeProject.category);
     const categoryCount = categoryProjects.length;
+
+    // 🚀 Preload inteligente: carrega próxima e anterior para transições instantâneas
+    useEffect(() => {
+        const imagesToPreload: string[] = [];
+
+        // Preload da próxima imagem
+        if (activeIndex + 1 < projects.length) {
+            imagesToPreload.push(projects[activeIndex + 1].image);
+        }
+
+        // Preload da imagem anterior (para scroll reverso)
+        if (activeIndex - 1 >= 0) {
+            imagesToPreload.push(projects[activeIndex - 1].image);
+        }
+
+        // Força o download das imagens
+        imagesToPreload.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, [activeIndex]);
 
     return (
         <section
