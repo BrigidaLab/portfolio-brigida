@@ -153,27 +153,39 @@ export const ProjectGallery: React.FC = () => {
                                 custom={scrollYProgress.getPrevious()! < scrollYProgress.get() ? 1 : -1}
                                 variants={{
                                     enter: (direction: number) => ({
-                                        y: direction > 0 ? -100 : 100,
+                                        y: direction > 0 ? -80 : 150,  // Vem de cima se descendo, de baixo se subindo
                                         opacity: 0,
-                                        scale: 0.95
+                                        scale: 0.92,
+                                        rotate: direction > 0 ? -3 : 3,  // Leve rotação na entrada
+                                        filter: "blur(4px)"
                                     }),
                                     center: {
                                         y: 0,
                                         opacity: 1,
                                         scale: 1,
+                                        rotate: 0,
+                                        filter: "blur(0px)",
                                         zIndex: 20
                                     },
                                     exit: (direction: number) => ({
-                                        y: direction > 0 ? 100 : -100,
+                                        y: direction > 0 ? 150 : -150,  // Cai para baixo se descendo, sobe se subindo
                                         opacity: 0,
-                                        scale: 0.95,
-                                        zIndex: 0
+                                        scale: 0.88,
+                                        rotate: direction > 0 ? 2 : -2,  // Leve rotação na saída (efeito carta)
+                                        filter: "blur(6px)",
+                                        zIndex: 0,
+                                        transition: {
+                                            duration: 0.5,
+                                            ease: [0.32, 0.72, 0, 1]  // Easing de queda natural
+                                        }
                                     })
                                 }}
+                                initial="enter"
+                                animate="center"
+                                exit="exit"
                                 transition={{
-                                    duration: 0.6,
-                                    ease: [0.16, 1, 0.3, 1]
-                                    // Cubic bezier suave
+                                    duration: 0.65,
+                                    ease: [0.16, 1, 0.3, 1]  // Cubic bezier suave para entrada
                                 }}
                                 className="absolute inset-0 w-full h-full bg-[#FFADAD] shadow-2xl z-20 overflow-hidden"
                             >
