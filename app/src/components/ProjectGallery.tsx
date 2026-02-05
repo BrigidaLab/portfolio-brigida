@@ -41,7 +41,12 @@ export const ProjectGallery: React.FC = () => {
             className="relative font-sans bg-[#fdfdfd]"
             style={{ height: SCROLL_HEIGHT }}
         >
-            <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col p-6 md:p-12 md:pb-24 xl:p-16">
+            {/* DEBUG MARKER - REMOVE AFTER VERIFICATION */}
+            <div className="fixed bottom-2 right-2 bg-red-600 text-white text-[10px] px-2 py-1 z-[9999] pointer-events-none rounded opacity-70">
+                V: FIX-TABLET-3
+            </div>
+
+            <div className="sticky top-0 h-[100dvh] w-full overflow-hidden flex flex-col p-6 md:p-12 md:pb-24 xl:p-16">
 
                 {/* 1. Container de Títulos (Alinhado com Hero) */}
                 <div className="relative md:absolute top-0 w-full max-w-[1400px] md:left-1/2 md:-translate-x-1/2 px-0 md:px-6 h-auto md:h-full pointer-events-none z-20">
