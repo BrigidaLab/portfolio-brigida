@@ -8,7 +8,7 @@ export const ProjectGallery: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     // Altura total ajustada para dar tempo de scroll
-    const SCROLL_HEIGHT = `${(projects.length + 1) * 40}vh`;
+    const SCROLL_HEIGHT = `${(projects.length + 1) * 55}vh`;
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -41,11 +41,11 @@ export const ProjectGallery: React.FC = () => {
             className="relative font-sans bg-[#fdfdfd]"
             style={{ height: SCROLL_HEIGHT }}
         >
-            <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col p-6 md:p-8 xl:p-12">
+            <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col p-6 md:p-12 xl:p-16">
 
                 {/* 1. Container de Títulos (Alinhado com Hero) */}
                 <div className="relative md:absolute top-0 w-full max-w-[1400px] md:left-1/2 md:-translate-x-1/2 px-0 md:px-6 h-auto md:h-full pointer-events-none z-20">
-                    <div className="relative w-full h-auto md:h-full flex flex-col justify-start md:justify-between pt-[80px] md:pt-[15vh] 2xl:pt-[120px] pb-0 md:pb-8 2xl:pb-16">
+                    <div className="relative w-full h-auto md:h-full flex flex-col justify-start md:justify-between pt-[80px] md:pt-[15vh] 2xl:pt-[120px] pb-0 md:pb-12 2xl:pb-16">
 
                         {/* Topo: Títulos */}
                         <div>
