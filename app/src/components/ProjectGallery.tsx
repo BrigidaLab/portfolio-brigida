@@ -41,17 +41,17 @@ export const ProjectGallery: React.FC = () => {
             className="relative font-sans bg-[#fdfdfd]"
             style={{ height: SCROLL_HEIGHT }}
         >
-            <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col p-6 md:p-12 xl:p-16">
+            <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col p-6 md:p-12 md:pb-24 xl:p-16">
 
                 {/* 1. Container de Títulos (Alinhado com Hero) */}
                 <div className="relative md:absolute top-0 w-full max-w-[1400px] md:left-1/2 md:-translate-x-1/2 px-0 md:px-6 h-auto md:h-full pointer-events-none z-20">
-                    <div className="relative w-full h-auto md:h-full flex flex-col justify-start md:justify-between pt-[80px] md:pt-[12vh] 2xl:pt-[120px] pb-0 md:pb-12 2xl:pb-16">
+                    <div className="relative w-full h-auto md:h-full flex flex-col justify-start md:justify-between pt-[80px] md:pt-[10vh] 2xl:pt-[120px] pb-0 md:pb-24 2xl:pb-16">
 
                         {/* Topo: Títulos */}
                         <div>
                             {/* Título Fixo */}
                             <div className="mix-blend-difference">
-                                <h1 className="text-[12vw] md:text-[60px] lg:text-[70px] xl:text-[80px] 2xl:text-[115px] leading-[0.9] lg:leading-[106%] tracking-tighter font-medium text-[#1d1d1d] uppercase">
+                                <h1 className="text-[12vw] md:text-[50px] lg:text-[70px] xl:text-[80px] 2xl:text-[115px] leading-[0.9] lg:leading-[106%] tracking-tighter font-medium text-[#1d1d1d] uppercase">
                                     SELECIONE<br />O PROJETO
                                 </h1>
                             </div>
