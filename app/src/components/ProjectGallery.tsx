@@ -41,17 +41,17 @@ export const ProjectGallery: React.FC = () => {
             className="relative font-sans bg-[#fdfdfd]"
             style={{ height: SCROLL_HEIGHT }}
         >
-            <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col p-6 lg:p-8 xl:p-12">
+            <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col p-6 md:p-8 xl:p-12">
 
                 {/* 1. Container de Títulos (Alinhado com Hero) */}
-                <div className="relative lg:absolute top-0 w-full max-w-[1400px] lg:left-1/2 lg:-translate-x-1/2 px-0 lg:px-6 h-auto lg:h-full pointer-events-none z-20">
-                    <div className="relative w-full h-auto lg:h-full flex flex-col justify-start lg:justify-between pt-[80px] lg:pt-[15vh] 2xl:pt-[120px] pb-0 lg:pb-8 2xl:pb-16">
+                <div className="relative md:absolute top-0 w-full max-w-[1400px] md:left-1/2 md:-translate-x-1/2 px-0 md:px-6 h-auto md:h-full pointer-events-none z-20">
+                    <div className="relative w-full h-auto md:h-full flex flex-col justify-start md:justify-between pt-[80px] md:pt-[15vh] 2xl:pt-[120px] pb-0 md:pb-8 2xl:pb-16">
 
                         {/* Topo: Títulos */}
                         <div>
                             {/* Título Fixo */}
                             <div className="mix-blend-difference">
-                                <h1 className="text-[12vw] lg:text-[60px] xl:text-[80px] 2xl:text-[115px] leading-[0.9] lg:leading-[106%] tracking-tighter font-medium text-[#1d1d1d] uppercase">
+                                <h1 className="text-[12vw] md:text-[60px] lg:text-[70px] xl:text-[80px] 2xl:text-[115px] leading-[0.9] lg:leading-[106%] tracking-tighter font-medium text-[#1d1d1d] uppercase">
                                     SELECIONE<br />O PROJETO
                                 </h1>
                             </div>
@@ -73,8 +73,8 @@ export const ProjectGallery: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Fundo: Info do Projeto (Agora alinhado aqui também) */}
-                        <div className="relative z-30 pl-1 hidden lg:block">
+                        {/* Fundo: Info do Projeto (Desktop/Tablet) */}
+                        <div className="relative z-30 pl-1 hidden md:block">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeProject.id}
@@ -87,7 +87,7 @@ export const ProjectGallery: React.FC = () => {
                                         {activeProject.title}
                                     </h2>
 
-                                    <div className="flex gap-4 max-w-xl text-sm lg:text-base text-gray-600 leading-relaxed border-l-2 border-black/10 pl-4">
+                                    <div className="flex gap-4 max-w-sm lg:max-w-xl text-sm lg:text-base text-gray-600 leading-relaxed border-l-2 border-black/10 pl-4">
                                         <p>{activeProject.description}</p>
                                     </div>
                                 </motion.div>
@@ -98,8 +98,8 @@ export const ProjectGallery: React.FC = () => {
                 </div>
 
                 {/* 2. Área Central (Cards Stack) - Empurrada para direita/baixo */}
-                <div className="flex-1 flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-end relative z-10 w-full mt-[70px] lg:mt-0 lg:pr-[2vw] 2xl:pr-[5vw]">
-                    <div className="relative w-full max-w-full sm:pr-8 md:pr-16 lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl aspect-video lg:mr-4 xl:mr-12">
+                <div className="flex-1 flex flex-col md:flex-row items-start md:items-center justify-start md:justify-end relative z-10 w-full mt-[70px] md:mt-0 lg:pr-[2vw] 2xl:pr-[5vw]">
+                    <div className="relative w-full max-w-full sm:pr-8 md:pr-0 md:max-w-[50%] lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl aspect-video md:mr-12">
 
                         {/* Decor de Fundo (Pilha) */}
                         <div className="absolute top-4 left-4 w-full h-full bg-[#FFE55C] rounded-none z-0 rotate-1 shadow-sm border border-black/5" />
@@ -146,7 +146,7 @@ export const ProjectGallery: React.FC = () => {
                     </div>
 
                     {/* Info do Projeto (Mobile Only) */}
-                    <div className="lg:hidden mt-[70px] w-full z-30 pl-1 relative pr-10">
+                    <div className="md:hidden mt-[40px] w-full z-30 pl-1 relative pr-10">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeProject.id}
@@ -182,8 +182,8 @@ export const ProjectGallery: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* 3. Paginação Vertical (Dots - Desktop Only) */}
-                    <div className="hidden lg:flex absolute right-0 lg:-right-8 top-1/2 -translate-y-1/2 flex-col gap-3 z-30 mr-2 lg:mr-0">
+                    {/* 3. Paginação Vertical (Dots - Desktop/Tablet Only) */}
+                    <div className="hidden md:flex absolute right-0 lg:-right-8 top-1/2 -translate-y-1/2 flex-col gap-3 z-30 mr-2 lg:mr-0">
                         {projects.map((proj, idx) => (
                             <motion.div
                                 key={proj.id}
