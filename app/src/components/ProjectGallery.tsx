@@ -41,11 +41,6 @@ export const ProjectGallery: React.FC = () => {
             className="relative font-sans bg-[#fdfdfd]"
             style={{ height: SCROLL_HEIGHT }}
         >
-            {/* DEBUG MARKER - REMOVE AFTER VERIFICATION */}
-            <div className="fixed bottom-2 right-2 bg-red-600 text-white text-[10px] px-2 py-1 z-[9999] pointer-events-none rounded opacity-70">
-                V: FIX-TABLET-3
-            </div>
-
             <div className="sticky top-0 h-[100dvh] w-full overflow-hidden flex flex-col p-6 min-[700px]:p-12 min-[700px]:pb-24 xl:p-16">
 
                 {/* 1. Container de Títulos (Alinhado com Hero) */}
@@ -104,7 +99,7 @@ export const ProjectGallery: React.FC = () => {
 
                 {/* 2. Área Central (Cards Stack) - Empurrada para direita/baixo */}
                 <div className="flex-1 flex flex-col min-[700px]:flex-row items-start min-[700px]:items-center justify-start min-[700px]:justify-end relative z-10 w-full mt-[70px] min-[700px]:mt-0 lg:pr-[2vw] 2xl:pr-[5vw]">
-                    <div className="relative w-full max-w-full sm:pr-8 min-[700px]:pr-0 min-[700px]:max-w-[50%] lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl aspect-video min-[700px]:mr-12">
+                    <div className="relative w-full max-w-full sm:pr-8 min-[700px]:pr-0 min-[700px]:max-w-[65%] lg:max-w-[60%] xl:max-w-xl 2xl:max-w-3xl aspect-video min-[700px]:mr-12">
 
                         {/* Decor de Fundo (Pilha) */}
                         <div className="absolute top-4 left-4 w-full h-full bg-[#FFE55C] rounded-none z-0 rotate-1 shadow-sm border border-black/5" />
