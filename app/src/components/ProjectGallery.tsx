@@ -151,7 +151,7 @@ export const ProjectGallery: React.FC = () => {
                     </div>
 
                     {/* Info do Projeto (Mobile Only) */}
-                    <div className="md:hidden mt-[40px] w-full z-30 pl-1 relative pr-10">
+                    <div className="min-[700px]:hidden mt-[40px] w-full z-30 pl-1 relative pr-10">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeProject.id}
@@ -188,7 +188,7 @@ export const ProjectGallery: React.FC = () => {
                     </div>
 
                     {/* 3. Paginação Vertical (Dots - Desktop/Tablet Only) */}
-                    <div className="hidden md:flex absolute right-0 lg:-right-8 top-1/2 -translate-y-1/2 flex-col gap-3 z-30 mr-2 lg:mr-0">
+                    <div className="hidden min-[700px]:flex absolute right-0 lg:-right-8 top-1/2 -translate-y-1/2 flex-col gap-3 z-30 mr-2 lg:mr-0">
                         {projects.map((proj, idx) => (
                             <motion.div
                                 key={proj.id}
