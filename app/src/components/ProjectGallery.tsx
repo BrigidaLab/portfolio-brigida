@@ -46,17 +46,17 @@ export const ProjectGallery: React.FC = () => {
                 V: FIX-TABLET-3
             </div>
 
-            <div className="sticky top-0 h-[100dvh] w-full overflow-hidden flex flex-col p-6 md:p-12 md:pb-24 xl:p-16">
+            <div className="sticky top-0 h-[100dvh] w-full overflow-hidden flex flex-col p-6 min-[700px]:p-12 min-[700px]:pb-24 xl:p-16">
 
                 {/* 1. Container de Títulos (Alinhado com Hero) */}
-                <div className="relative md:absolute top-0 w-full max-w-[1400px] md:left-1/2 md:-translate-x-1/2 px-0 md:px-6 h-auto md:h-full pointer-events-none z-20">
-                    <div className="relative w-full h-auto md:h-full flex flex-col justify-start md:justify-between pt-[80px] md:pt-[10vh] 2xl:pt-[120px] pb-0 md:pb-24 2xl:pb-16">
+                <div className="relative min-[700px]:absolute top-0 w-full max-w-[1400px] min-[700px]:left-1/2 min-[700px]:-translate-x-1/2 px-0 min-[700px]:px-6 h-auto min-[700px]:h-full pointer-events-none z-20">
+                    <div className="relative w-full h-auto min-[700px]:h-full flex flex-col justify-start min-[700px]:justify-between pt-[80px] min-[700px]:pt-[10vh] 2xl:pt-[120px] pb-0 min-[700px]:pb-24 2xl:pb-16">
 
                         {/* Topo: Títulos */}
                         <div>
                             {/* Título Fixo */}
                             <div className="mix-blend-difference">
-                                <h1 className="text-[12vw] md:text-[50px] lg:text-[70px] xl:text-[80px] 2xl:text-[115px] leading-[0.9] lg:leading-[106%] tracking-tighter font-medium text-[#1d1d1d] uppercase">
+                                <h1 className="text-[12vw] min-[700px]:text-[50px] lg:text-[70px] xl:text-[80px] 2xl:text-[115px] leading-[0.9] lg:leading-[106%] tracking-tighter font-medium text-[#1d1d1d] uppercase">
                                     SELECIONE<br />O PROJETO
                                 </h1>
                             </div>
@@ -79,7 +79,7 @@ export const ProjectGallery: React.FC = () => {
                         </div>
 
                         {/* Fundo: Info do Projeto (Desktop/Tablet) */}
-                        <div className="relative z-30 pl-1 hidden md:block">
+                        <div className="relative z-30 pl-1 hidden min-[700px]:block">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeProject.id}
@@ -103,8 +103,8 @@ export const ProjectGallery: React.FC = () => {
                 </div>
 
                 {/* 2. Área Central (Cards Stack) - Empurrada para direita/baixo */}
-                <div className="flex-1 flex flex-col md:flex-row items-start md:items-center justify-start md:justify-end relative z-10 w-full mt-[70px] md:mt-0 lg:pr-[2vw] 2xl:pr-[5vw]">
-                    <div className="relative w-full max-w-full sm:pr-8 md:pr-0 md:max-w-[50%] lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl aspect-video md:mr-12">
+                <div className="flex-1 flex flex-col min-[700px]:flex-row items-start min-[700px]:items-center justify-start min-[700px]:justify-end relative z-10 w-full mt-[70px] min-[700px]:mt-0 lg:pr-[2vw] 2xl:pr-[5vw]">
+                    <div className="relative w-full max-w-full sm:pr-8 min-[700px]:pr-0 min-[700px]:max-w-[50%] lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl aspect-video min-[700px]:mr-12">
 
                         {/* Decor de Fundo (Pilha) */}
                         <div className="absolute top-4 left-4 w-full h-full bg-[#FFE55C] rounded-none z-0 rotate-1 shadow-sm border border-black/5" />
