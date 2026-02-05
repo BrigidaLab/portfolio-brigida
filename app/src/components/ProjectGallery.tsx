@@ -41,28 +41,28 @@ export const ProjectGallery: React.FC = () => {
             className="relative font-sans bg-[#fdfdfd]"
             style={{ height: SCROLL_HEIGHT }}
         >
-            <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col p-6 lg:p-12">
+            <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col p-6 lg:p-8 xl:p-12">
 
                 {/* 1. Container de Títulos (Alinhado com Hero) */}
                 <div className="relative lg:absolute top-0 w-full max-w-[1400px] lg:left-1/2 lg:-translate-x-1/2 px-0 lg:px-6 h-auto lg:h-full pointer-events-none z-20">
-                    <div className="relative w-full h-auto lg:h-full flex flex-col justify-start lg:justify-between pt-[120px] pb-0 lg:pb-16">
+                    <div className="relative w-full h-auto lg:h-full flex flex-col justify-start lg:justify-between pt-[80px] lg:pt-[15vh] 2xl:pt-[120px] pb-0 lg:pb-8 2xl:pb-16">
 
                         {/* Topo: Títulos */}
                         <div>
                             {/* Título Fixo */}
                             <div className="mix-blend-difference">
-                                <h1 className="text-[12vw] lg:text-[115px] leading-[0.9] lg:leading-[106%] tracking-tighter font-medium text-[#1d1d1d] uppercase">
+                                <h1 className="text-[12vw] lg:text-[60px] xl:text-[80px] 2xl:text-[115px] leading-[0.9] lg:leading-[106%] tracking-tighter font-medium text-[#1d1d1d] uppercase">
                                     SELECIONE<br />O PROJETO
                                 </h1>
                             </div>
 
                             {/* Cabeçalho da Categoria */}
-                            <div className="mt-8 lg:mt-12 flex items-center gap-4 pl-1">
+                            <div className="mt-6 2xl:mt-12 flex items-center gap-4 pl-1">
                                 <div className="relative">
                                     <TypewriterTitle
                                         key={activeProject.category}
                                         text={activeProject.category}
-                                        className="text-2xl lg:text-4xl bg-[#61E88A]/0"
+                                        className="text-2xl lg:text-3xl xl:text-4xl bg-[#61E88A]/0"
                                     />
                                 </div>
                                 <div className="w-8 h-8 rounded-full bg-[#61E88A] flex items-center justify-center">
@@ -98,8 +98,8 @@ export const ProjectGallery: React.FC = () => {
                 </div>
 
                 {/* 2. Área Central (Cards Stack) - Empurrada para direita/baixo */}
-                <div className="flex-1 flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-end relative z-10 w-full mt-[70px] lg:mt-0 lg:pr-[5vw]">
-                    <div className="relative w-full max-w-md lg:max-w-3xl aspect-video lg:mr-12">
+                <div className="flex-1 flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-end relative z-10 w-full mt-[70px] lg:mt-0 lg:pr-[2vw] 2xl:pr-[5vw]">
+                    <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl aspect-video lg:mr-4 xl:mr-12">
 
                         {/* Decor de Fundo (Pilha) */}
                         <div className="absolute top-4 left-4 w-full h-full bg-[#FFE55C] rounded-none z-0 rotate-1 shadow-sm border border-black/5" />
@@ -129,9 +129,6 @@ export const ProjectGallery: React.FC = () => {
                                         zIndex: 0
                                     })
                                 }}
-                                initial="enter"
-                                animate="center"
-                                exit="exit"
                                 transition={{
                                     duration: 0.6,
                                     ease: [0.16, 1, 0.3, 1]
