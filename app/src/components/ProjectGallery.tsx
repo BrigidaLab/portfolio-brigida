@@ -99,7 +99,7 @@ export const ProjectGallery: React.FC = () => {
 
                 {/* 2. Área Central (Cards Stack) - Empurrada para direita/baixo */}
                 <div className="flex-1 flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-end relative z-10 w-full mt-[70px] lg:mt-0 lg:pr-[2vw] 2xl:pr-[5vw]">
-                    <div className="relative w-full max-w-md md:max-w-full md:pr-16 lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl aspect-video lg:mr-4 xl:mr-12">
+                    <div className="relative w-full max-w-full sm:pr-8 md:pr-16 lg:max-w-lg xl:max-w-xl 2xl:max-w-3xl aspect-video lg:mr-4 xl:mr-12">
 
                         {/* Decor de Fundo (Pilha) */}
                         <div className="absolute top-4 left-4 w-full h-full bg-[#FFE55C] rounded-none z-0 rotate-1 shadow-sm border border-black/5" />
